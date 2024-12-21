@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #1DB954, #191414);
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1DB954;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .logo-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: #666;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #eee;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #1DB954;
+      box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.1);
+    }
+
+    input[type="date"] {
+      padding: 11px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 20px 0;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      accent-color: #1DB954;
+    }
+
+    .terms-link {
+      color: #1DB954;
+      text-decoration: none;
+    }
+
+    .terms-link:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-primary {
+      background: #1DB954;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary:hover {
+      background: #1ed760;
+    }
+
+    .btn-social {
+      background: #f8f8f8;
+      color: #333;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid #eee;
+    }
+
+    .btn-social:hover {
+      background: #fff;
+    }
+
+    .btn-social img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .login-link {
+      text-align: center;
+      margin: 20px 0;
+      color: #666;
+    }
+
+    .login-link a {
+      color: #1DB954;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon">🎵</div>
+      Melodify
+    </div>
+    <h1>Create Your Account</h1>
+    <p class="subtitle">Join the rhythm of millions of music lovers!</p>
+    
+    <form>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Create a password">
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm your password">
+      </div>
+
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <select>
+          <option value="">Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+          <option value="prefer-not">Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms">
+        <label for="terms">I accept the <a href="#" class="terms-link">terms and conditions</a></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Start Listening</button>
+      
+      <button type="button" class="btn btn-social">
+        <img src="/api/placeholder/20/20" alt="Google icon" />
+        Continue with Google
+      </button>
+      
+      <button type="button" class="btn btn-social">
+        <img src="/api/placeholder/20/20" alt="Facebook icon" />
+        Continue with Facebook
+      </button>
+
+      <div class="login-link">
+        Already have an account? <a href="#">Sign In</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
