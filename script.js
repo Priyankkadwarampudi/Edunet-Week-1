@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // Get form data
+        // Get form 
         const formData = {
             fullName: form.querySelector('input[type="text"]').value.trim(),
             email: form.querySelector('input[type="email"]').value.trim(),
